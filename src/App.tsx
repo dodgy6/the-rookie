@@ -1,6 +1,6 @@
 import React from "react";
 import { Store } from "./Store";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 
 function App(props: any): JSX.Element {
   const { state } = React.useContext(Store);

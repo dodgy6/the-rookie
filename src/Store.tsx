@@ -24,9 +24,7 @@ function reducer(state: IState, action: IAction): IState {
   }
 }
 
-export function StoreProvider({
-  children,
-}: JSX.ElementChildrenAttribute): JSX.Element {
+export function StoreProvider({ children }: any): JSX.Element {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   return (
