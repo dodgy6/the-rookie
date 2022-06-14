@@ -1,16 +1,16 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import { StoreProvider } from "./Store";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./routes";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root")!);
+root.render(
   <StoreProvider>
     <BrowserRouter>
-      <App /> 
+      <App />
       <Router />
     </BrowserRouter>
-  </StoreProvider>,
-  document.getElementById("root")
+  </StoreProvider>
 );
